@@ -9,7 +9,6 @@ const navLinks = [
   { name: "Projects", href: "#projects" },
   { name: "Experience", href: "#experience" },
   { name: "Contact", href: "#contact" },
-  
 ];
 
 export default function Navbar() {
@@ -18,7 +17,8 @@ export default function Navbar() {
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8 }}
-      className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-white/5 backdrop-blur-lg border border-white/10 px-8 py-3 rounded-full shadow-xl flex gap-8 text-white"
+      className="fixed top-4 left-1/2 -translate-x-1/2 z-50 bg-white/5 backdrop-blur-lg border border-white/10 px-4 sm:px-8 py-3 rounded-full shadow-xl flex gap-4 sm:gap-8 text-white max-w-full w-[95vw] sm:w-auto"
+      style={{ boxSizing: "border-box" }}
     >
       {navLinks.map((link, index) => (
         <a
